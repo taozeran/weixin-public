@@ -3,6 +3,7 @@ package com.example.demo.config;
 import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 
 import javax.sql.DataSource;
@@ -10,6 +11,7 @@ import javax.sql.DataSource;
 /**
  * Created by taozeran on 2020/3/24/16:47
  */
+@Configuration
 public class JPAConfig {
     @Autowired
     private Environment env;
