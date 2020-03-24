@@ -6,7 +6,7 @@
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <pattern>
-                web - %date [%thread] %-5level %logger{5} - %message%n%stack{5,1}
+                %d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] [%-5level %logger - %msg%n
             </pattern>
         </encoder>
     </appender>
@@ -19,7 +19,7 @@
 
         <!-- 日志格式 -->
         <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] %logger - %msg%n</pattern>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] [%-5level] %logger - %msg%n</pattern>
         </encoder>
         <filter class="ch.qos.logback.classic.filter.LevelFilter">
             <level>INFO</level>
