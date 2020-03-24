@@ -1,0 +1,14 @@
+language: java
+jdk:
+  - openjdk8
+#services:
+#  - mysql
+
+script: "mvn clean package -Dmaven.test.skip=true"
+
+deploy:
+  - ./deploy.sh
+
+branches:
+  only:
+    - master
