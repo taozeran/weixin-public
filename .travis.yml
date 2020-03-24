@@ -4,6 +4,9 @@ jdk:
 #services:
 #  - mysql
 
+before_install:
+  - chmod +x mvnw
+
 script: "mvn clean package -Dmaven.test.skip=true"
 
 #deploy:
