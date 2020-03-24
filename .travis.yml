@@ -6,8 +6,8 @@ jdk:
 
 script: "mvn clean package -Dmaven.test.skip=true"
 
-deploy:
-  - ./deploy.sh
+#deploy:
+#  - ./deploy.sh
 
 branches:
   only:
