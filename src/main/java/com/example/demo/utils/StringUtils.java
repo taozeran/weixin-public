@@ -22,7 +22,7 @@ public class StringUtils {
             int l = b & 0xF;
             int h = (b >> 4)&0xF;
             ans.append(Character.forDigit(h,16));
-            ans.append(Character.forDigit(h,16));
+            ans.append(Character.forDigit(l,16));
         }
         return ans.toString();
     }

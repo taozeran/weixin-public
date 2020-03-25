@@ -15,7 +15,7 @@
  */
 package com.example.demo.test;
 
-import com.example.demo.api.AuthController;
+import com.example.demo.api.WeChatMessageController;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -26,8 +26,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@WebMvcTest(AuthController.class)
-public class AuthControllerTests {
+@WebMvcTest(WeChatMessageController.class)
+public class WeChatMessageControllerTests {
 	@Autowired
     private MockMvc mockMvc;
 
