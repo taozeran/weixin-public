@@ -12,10 +12,12 @@ import org.springframework.stereotype.Component;
 public class WeChatProperties {
     @Value("${wechat.appID}")
     private String appID;
-    @Value("${wechat.appsecret}")
-    private String appsecret;
-    @Value("${wechat.message.delay.threshold.seconds}")
-    private long delayThreshold;
+    @Value("${wechat.appSecret}")
+    private String appSecret;
     @Value("${wechat.token}")
     private String token;
+    @Value("${wechat.aesKey}")
+    private String aesKey;
+    @Value("${wechat.message.delay.threshold.seconds}")
+    private long delayThreshold;
 }

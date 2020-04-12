@@ -23,12 +23,13 @@ public class LogAspect {
         try {
             StringBuilder sb = new StringBuilder();
             for (Object o : joinPoint.getArgs()) {
+
                 if (o instanceof String) {
                     sb.append(o);
                 }else if (o instanceof RequestFacade || o instanceof ResponseFacade) {
                     // pass
                 }else{
-                    sb.append(o.toString());
+                    sb.append(o);
                 }
                 sb.append(" ");
             }

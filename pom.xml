@@ -17,6 +17,7 @@
     <properties>
         <java.version>1.8</java.version>
         <swagger.version>2.9.2</swagger.version>
+        <weixin-java.version>3.7.0</weixin-java.version>
     </properties>
 
     <dependencies>
@@ -32,7 +33,11 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+        <!--use h2 temporaly-->
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
@@ -57,16 +62,43 @@
             <artifactId>springfox-swagger-ui</artifactId>
             <version>${swagger.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.github.binarywang</groupId>
+            <artifactId>weixin-java-mp</artifactId>
+            <version>${weixin-java.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.binarywang</groupId>
+            <artifactId>weixin-java-miniapp</artifactId>
+            <version>${weixin-java.version}</version>
+        </dependency>
+
+        <!--spring security-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.thymeleaf.extras</groupId>
+            <artifactId>thymeleaf-extras-springsecurity5</artifactId>
+        </dependency>
+
 
         <dependency>
-            <groupId>com.fasterxml.jackson.dataformat</groupId>
-            <artifactId>jackson-dataformat-xml</artifactId>
+        <groupId>com.fasterxml.jackson.dataformat</groupId>
+        <artifactId>jackson-dataformat-xml</artifactId>
         </dependency>
+
         <!--<dependency>-->
-            <!--<groupId>org.bouncycastle</groupId>-->
-            <!--<artifactId>bcprov-jdk15on</artifactId>-->
-            <!--<version>1.64</version>-->
+        <!--<groupId>org.bouncycastle</groupId>-->
+        <!--<artifactId>bcprov-jdk15on</artifactId>-->
+        <!--<version>1.64</version>-->
         <!--</dependency>-->
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -95,12 +127,6 @@
             <id>prd</id>
             <properties>
                 <profileActive>prd</profileActive>
-            </properties>
-        </profile>
-        <profile>
-            <id>local</id>
-            <properties>
-                <profileActive>local</profileActive>
             </properties>
         </profile>
         <profile>

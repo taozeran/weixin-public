@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @JacksonXmlRootElement(localName = "xml")
-public class ResponseWechatMessage {
+public class OutTextMessage{
     /**
      * <xml>
      *   <ToUserName><![CDATA[toUser]]></ToUserName>
